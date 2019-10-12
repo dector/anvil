@@ -80,8 +80,10 @@ publishing {
 			version project.version
 			artifactId POM_ARTIFACT_SDK15_ID
 			artifact "$buildDir/outputs/aar/$POM_ARTIFACT_SDK15_ID-release.aar"
-			/*artifact sourcesJar*/
-			/*artifact javadocJar*/
+			afterEvaluate {
+				artifact sourcesJar
+				artifact javadocJar
+			}
 			fixPom(pom)
 		}
 		sdk19(MavenPublication) {
@@ -89,8 +91,10 @@ publishing {
 			version project.version
 			artifactId POM_ARTIFACT_SDK19_ID
 			artifact "$buildDir/outputs/aar/$POM_ARTIFACT_SDK19_ID-release.aar"
-			/*artifact sourcesJar*/
-			/*artifact javadocJar*/
+			afterEvaluate {
+				artifact sourcesJar
+				artifact javadocJar
+			}
 			fixPom(pom)
 		}
 		sdk21(MavenPublication) {
@@ -98,8 +102,10 @@ publishing {
 			version project.version
 			artifactId POM_ARTIFACT_SDK21_ID
 			artifact "$buildDir/outputs/aar/$POM_ARTIFACT_SDK21_ID-release.aar"
-			/*artifact sourcesJar*/
-			/*artifact javadocJar*/
+			afterEvaluate {
+				artifact sourcesJar
+				artifact javadocJar
+			}
 			fixPom(pom)
 		}
 	}

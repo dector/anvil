@@ -79,8 +79,10 @@ publishing {
 			version project.version
 			artifactId POM_ARTIFACT_ID
 			artifact "$buildDir/outputs/aar/$POM_ARTIFACT_ID-release.aar"
-			/*artifact sourcesJar*/
-			/*artifact javadocJar*/
+			afterEvaluate {
+				artifact sourcesJar
+				artifact javadocJar
+			}
 			fixPom(pom)
 		}
 	}
